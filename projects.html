@@ -1,75 +1,117 @@
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>my projects</title>
-    <link href= "projects.css" type= "text/css" rel= "stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
+<style>
+    a:hover {color: "blue"}
+</style>
+<title>Projects</title>
+
 <body>
-    <nav class = "navbar container-fluid" style = "padding-top: 30px">
-        <a class = "navbar-brand" href= "index.html" style = "padding-left:15px"><h3>Rohan Bafna</h3></a>
-        <ul class = "navbar-text ml-auto" style = "padding-right:50px; font-size:18px"><a href = "projects.html">My Work</a></ul>
-    </nav>
-    <div class="row justify-content-start">
-        <div class="col">
-            <div id = "bold_metrics" class = "small" onmouseover="document.getElementById('informate_img').style.visibility = 'visible';" onmouseout = "document.getElementById('informate_img').style.visibility = 'hidden';">
-                <h4><b>Intern @ Bold Metrics</b></h4>
-                <p>[05.20.2022 - Present]</p>
-                <p style="font-size: 14px;">Developed a new CLI for clients to upload size charts to our PostgreSQL database. Performed comparative data analyses on client inventories, categorizing products with similar sizing to use the same prediction models.</p>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <script>
+        // $('#nav a').click(function () {
+        //     $('#nav a').css("textDecoration", "none");
+        //     $(this).css('textDecoration', 'underline');
+        //     return false;
+        // });
+
+        // $('#nav a').hover(function() {
+        //     $('#nav a').css("textColor", "blue");
+        //     $(this).css('textDecoration', 'underline')
+        //     return false;
+        // })
+    </script>
+
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        // Declare a "loop" variable
+        var i;
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.flex = "25%";
+        }
+    </script>
+
+    <div style="padding-top: 16px; padding-left: 25px;">
+        <div id="nav_bar">
+
+            <!-- V logo -->
+            <div style="padding-left: 5%; display: inline-block;">
+                <h1><a href="index.html">Anirudh Vemuri</a></h1>
             </div>
-            <br><br>
-            <div id = "jamshidi" class = "small" onmouseover="document.getElementById('informate_img').style.visibility = 'visible';" onmouseout = "document.getElementById('informate_img').style.visibility = 'hidden';">
-                <h4><b>Research @ UofSC</b></h4>
-                <p>[1.28.21 - 9.30.21]</p>
-                <p style = "font-size: 14px;">Used Tensorflow to create, modify, and quantize machine learning models. Experimentally deployed layers these models to microcontrollers to pinpoint the distribution that yields maximum accuracy.
-            </p>
+
+            <!-- Sections -->
+            <div style="float: right; padding-right: 12%; padding-top: 30px;">
+
+                <div style="display: inline-block;">
+                    <h4><a class="active-page" href="projects.html">Projects</a></h4>
+                </div>
+
+                <div style="display: inline-block; padding-left: 50px;">
+                    <h4><a href="https://docs.google.com/document/d/1WiS4R0WKwrwUzp6bVM9sqkvDeeFDQhVmoyyNUFpMHhg/edit?usp=sharing">Resume</a></h4>
+                </div>
+
             </div>
-                <br><br>
-            <div id = "clemson" class = "small"  onmouseover="document.getElementById('informate_img').style.visibility = 'visible';" onmouseout = "document.getElementById('informate_img').style.visibility = 'hidden';">
-                <h4><b>Intern @ CU-ICAR</b></h4>
-                <p>[6.01.2021 - 8.20.2021]</p>
-                <p style="font-size: 14px;">Recreated and re-ran popular machine learning models in both MatLab and TensorFlow in Python to dive deep into the differences of each new model, compare ease of use, modularity, and speed of both platforms.</p>
-            </div>
-            <br><br>
+
         </div>
-        <div class="col">
-            <div id = "informate" class = "small" onmouseover="document.getElementById('informate_img').style.visibility = 'visible';" onmouseout = "document.getElementById('informate_img').style.visibility = 'hidden';">
-                <h4><b>Informate</b></h4>
-                <p>[12.18.2020]</p>
-                <p style="font-size: 14px;"><a href = "https://informate.vercel.app" target = "_blank"><u>Informate</u></a> scrapes news <a href = "https://github.com/rbafna6507/newsaggregator_scraper" target = "_blank"><u>articles from the home pages</u></a> of several popular news outlets and displays them in real time by pinging a <a href = "https://github.com/rbafna6507/newsaggregator_backend" target = "_blank"><u>self-made API</u>.</a></p>
+
+        <div>
+            <div id="stuff_ive_created_list"
+                style="height: fit-content; width: 480px; padding-top: 25px; float: left; padding-left: 5%;">
+                <p>
+                    <p style="font-weight: bolder"><a href="https://github.com/Avemur/DreamLink"><b>DreamLink</b></a></p>
+                    <p style="color: #9B9B9B;">[February 2024]</p>
+                    <p>Created a tool, losely based on a traditional dream journal, that uses artificial intelligence to analyze the content of an individual's dreams and categorize their thoughts into one of the different dream styles. Users are able to then use the platform to connect to others with similar characteristics.</p>
+                    <br>
+                    <br>
+                    <p style="font-weight: bolder"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7124266612806860800/"><b>Clemson Research</b></a></p>
+                    <p style="color: #9B9B9B;">[July 2023 - August 2023]</p>
+                    <p>Designed an artificial intelligence agent to optimize the information searching procedure for Parkinson’s Disease caregivers. Utilized Python, TensorFlow, and Pandas to create various demo model iterations with Naive Bayes, Random Trees, and Linear Regression. Published findings and presented results at the Clemson University College of Engineering Annual Research Symposium </p>
+                    <br>
+                    <br>
+                    <p><a href="https://github.com/Avemur/Dispo.ly/tree/main"><b>Dispo.ly</b></a></p>
+                    <p style="color: #9B9B9B;">[April 2022]</p>
+                    <p>Dispo.ly takes in a file input from a folder and uses machine learning via TensorFlow to analyze the photo and determine if it's compostable, recyclable, or trash, outputted on the web page.</p>
+                    <br>
+                    <br>
+                    <p><b>OceanWaste</b></p>
+                    <p style="color: #9B9B9B;">[March 2022]</p>
+                    <p>Utilized Swift’s ARKit to create an IOS-based tool to scale the quantity of microplastic waste in the oceans. Designed to use augmented reality to quantify the scale of microplastic wastage; entered in Apple’s 2022 WWDC competition. </p>
+                    <br>
+                    <br>
+                    <p><a href="https://github.com/KrishnanS2006/Bias.ly"><b>Bias.ly</b></a></p>
+                    <p style="color: #9B9B9B;">[March 2022]</p>
+                    <p>Bias.ly is a tool to discover biases in different news sources. Initially scraping news websites for initial data based on a keyword, we load data such as headlines, description, and content into a dictionary, then depositing them into a list. After conversions to JSON and Pandas DataFrames, we then begin cleaning the data to prepare it for sentiment analysis to discover biases. Specifically, utilizing tokenization and lammetization, we begin our sentiment analysis for a single news source among the past 14 days of articles. We average the sentiments for each article for each day, and return it to display in a graph on the frontend.</p>
+                    <br>
+                    <br>
+                    <!--
+                    <p><a href="https://github.com/vaibhavbafna5/perl"><b>_PERL_</b></a></p>
+                    <p style="color: #9B9B9B;">[2020]</p>
+                    <p>Created a conversational virtual assistant with custom integrations - paying/requesting close friends through Venmo, handling Spotify sessions (pause, play, skip, creating a new playlist), sending texts, and summarizing search queries. Pre-ChatGPT.</p>
+                    <br>
+                    <br>
+                    <p><a href="https://github.com/gregoryyoung2/search-engine"><b>_C++_SEARCH_ENGINE_</b></a></p>
+                    <p style="color: #9B9B9B;">[2020]</p>
+                    <p>Capstone Project involved designing a fully functioning search engine - parser, crawler, index, constraint solver, query compiler, and a ranker. This was built entirely in C++ and because using the STL was prohibited, elements such as vectors, arrays, hashtables, and even strings were built from scratch. Repository is currently private.</p>
+                    <br>
+                    <br>
+                    <p><a href="https://github.com/vaibhavbafna5/lyft-sms-api"><b>_LYFT_SMS_</b></a></p>
+                    <p style="color: #9B9B9B;">[2019]</p>
+                    <p>Backend-only hackweek project that allowed users to order Lyfts via SMS. Designed for communites with low smartphone adoption.</p>
+                    <br>
+                    <br>
+                    -->
+                </p>
             </div>
-            <br><br>
-            <div id = "password" class = "small" onmouseover="document.getElementById('password_img').style.visibility = 'visible';" onmouseout = "document.getElementById('password_img').style.visibility = 'hidden';">
-                <h4><b>Password Manager</b></h4>
-                <p>[9.3.2020]</p>
-                <p style="font-size: 14px;">Locally hashes, stores, and retrieves passwords, usernames, and URLs at a push of a button. This also helped reinforce the basics of python. View my beginner-esque code <a href = "https://github.com/rbafna6507/passwordstorageproject" target = "_blank"><u>here</u></a>.</p>
-            </div>
-            <br><br>
-            <div id = "hangman" class = "small" onmouseover="document.getElementById('hangman_img').style.visibility = 'visible';" onmouseout = "document.getElementById('hangman_img').style.visibility = 'hidden';">
-                <h4><b>HangPy</b></h4>
-                <p>[7.24.2020]</p>
-                <p style="font-size: 14px;">The <a href = "https://github.com/rbafna6507/hangmanpython" target = "_blank"><u>game of hangman</u></a> developed in python. This gave me an understanding of the logical processes and steps needed to code well.</p>
-            </div>
-            <!-- <br><br> -->
-            <!-- <div id = "automation" class = "small" onmouseover="document.getElementById('password_img').style.visibility = 'visible';" onmouseout = "document.getElementById('password_img').style.visibility = 'hidden';">
-                <h4><b>Automation</b></h4>
-                <p>[8.9.2020]</p>
-                <p style="font-size: 14px;">Automated the sending of emails and texts as well as the filling out of Google Forms through Flask and Heroku. Delivered weekly volunteer opportunities and frequent advertisements for clubs/organizations.</p>
-            </div> -->
-        </div>
-        <!-- <div class="col-md-auto">
-            <img id = "informate_img" class = "imgs" src = "informate_pic.png">
-            <p id = "informate_img" style="font-size: 14px;">Used Tensorflow to create and quantize machine learning models. Converted and deployed individual layers onto microcontrollers to experimentally pinpoint the distribution that yields maximum accuracy and throughput. Peep some of my Jupyter Notebooks</p>
-            <img id = "hangman_img" class = "imgs" src = "hangman_pic.png">
-            <img id = "password_img" class = "imgs" src = "password_pic.png">
-            <p id = "informate_img" style="font-size: 14px;">Used Tensorflow to create and quantize machine learning models. Converted and deployed individual layers onto microcontrollers to experimentally pinpoint the distribution that yields maximum accuracy and throughput. Peep some of my Jupyter Notebooks</p>
-            <img id = "automation_img" class = "imgs" src = "automation_pic.png">
-        </div> -->
-      </div>
 </body>
 </html>
